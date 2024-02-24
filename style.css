@@ -6,8 +6,24 @@
     border: solid rgb(145, 110, 65);
 }
 
+.drawing-tools {
+    display: flex;
+
+}
+
 .controls {
     border: solid rgb(235, 93, 83);
+    display: flex;
+    flex-direction: column;
+}
+
+.tools {
+    margin: 20px;
+    padding: 10px;
+}
+
+span {
+    border: solid red;
 }
 
 .canvas {
