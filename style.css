@@ -1,0 +1,19 @@
+.header {
+    border: solid aqua;
+}
+
+.main {
+    border: solid rgb(145, 110, 65);
+}
+
+.controls {
+    border: solid rgb(235, 93, 83);
+}
+
+.canvas {
+    border: solid rgb(221, 199, 170);
+}
+
+#slider {
+    border: solid rgb(214, 171, 51);
+}
