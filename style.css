@@ -7,7 +7,7 @@ body {
 
 .header {
     /* border: solid red; */
-    background-color: rgb(221, 228, 235);
+    background-color: rgb(245, 241, 241);
     display: flex;
     justify-content: center;
 }
@@ -20,15 +20,11 @@ body {
     padding: 15px;
 }
 
-.main {
-    border: solid rgb(145, 110, 65);
-}
-
 .drawing-tools {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin: 20px;
 
 }
 
@@ -48,21 +44,55 @@ body {
 #color-picker{
     height: 80px;
     width: 80px;
-}
-
-span {
-    /* border: solid red; */
+    border: none;
 }
 
 .canvas {
     border: solid rgb(221, 199, 170);
 }
 
-#slider {
-    border: solid rgb(214, 171, 51);
+#slider p {
+    margin: 5px;
 }
 
-/* CSS */
+#slider {
+    /* border: solid rgb(214, 171, 51); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="range"] {
+    appearance: none;
+    width: 250px;
+    height: 30px; /* Height of the slider track */
+    background: #d3d3d3; /* Default background color of the slider track */
+    border-radius: 300px; /* Rounded corners for the slider track */
+}
+
+/* Styling the track */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #d3d3d3; /* Background color of the slider track */
+    border-radius: 50px; /* Rounded corners */
+}
+
+/* Styling the thumb */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 30px; /* Width of the thumb */
+    height: 30px; /* Height of the thumb */
+    background: rgb(73, 73, 73); /* Background color of the thumb */
+    border-radius: 50%; /* Rounded shape */
+    border: 2px solid rgb(73, 73, 73); /* Border around the thumb */
+    cursor: pointer; /* Cursor style */
+}
+
+
+
+
+
+/* TOOLS BUTTON */
 .tools {
     background-color: #FCFCFD;
     border-radius: 4px;
