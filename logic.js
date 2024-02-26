@@ -11,6 +11,7 @@ sliderInput.addEventListener('input',() => {
 })
 
 generateButton.addEventListener('click', () => {
+    canvas.innerHTML = ''
     generateDivs(canvasSize)
 })
 
@@ -22,6 +23,7 @@ function generateDivs(size) {
 
         div.style.border = "solid black"
         div.style.display = "flex"
+        div.style.flexGrow = 
         canvas.appendChild(div)
     }
 }
