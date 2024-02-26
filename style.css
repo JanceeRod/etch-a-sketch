@@ -24,10 +24,11 @@ body {
 }
 
 .drawing-tools {
+    /* border: solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin-top: 20px;
 
 }
 
@@ -51,7 +52,12 @@ body {
 }
 
 .canvas {
-    border: solid rgb(221, 199, 170);
+    border: solid rgb(73 ,73, 73);
+    border-radius: 10px;
+    height: 460px;
+    width: 460px;
+    margin-left: 20px;
+
 }
 
 #slider p {
