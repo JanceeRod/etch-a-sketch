@@ -1,4 +1,5 @@
 const canvas = document.getElementById('canvas')
+const generateButton = document.getElementById('generate-canvas')
 
 const sliderInput = document.getElementById('myRange')
 const sizeDisplay = document.getElementById('size')
@@ -7,6 +8,10 @@ let canvasSize = sliderInput.value
 sliderInput.addEventListener('input',() => {
     canvasSize = sliderInput.value
     sizeDisplay.textContent = canvasSize + " x "  + canvasSize
+})
+
+generateButton.addEventListener('click', () => {
+    generateDivs(canvasSize)
 })
 
 function generateDivs(size) {
