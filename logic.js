@@ -1,3 +1,6 @@
+const colorInput = document.getElementById('color-picker')
+let color = colorInput.value
+
 const canvas = document.getElementById('canvas')
 const generateButton = document.getElementById('generate-canvas')
 
@@ -10,9 +13,11 @@ sliderInput.addEventListener('input',() => {
     sizeDisplay.textContent = canvasSize + " x "  + canvasSize
 })
 
+
 generateButton.addEventListener('click', () => {
     canvas.innerHTML = ''
     generateDivs(canvasSize)
+    console.log(color)
 })
 
 function generateDivs(size) {
@@ -31,3 +36,8 @@ function generateDivs(size) {
         canvas.appendChild(div)
     }
 }
+
+
+colorInput.addEventListener('input', () => {
+    color = colorInput.value
+})
