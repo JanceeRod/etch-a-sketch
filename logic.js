@@ -15,6 +15,8 @@ const sliderInput = document.getElementById('myRange')
 const sizeDisplay = document.getElementById('size')
 let canvasSize = sliderInput.value
 
+generateDivs(canvasSize)
+
 sliderInput.addEventListener('input',() => {
     canvasSize = sliderInput.value
     sizeDisplay.textContent = canvasSize + " x "  + canvasSize
@@ -52,6 +54,11 @@ function generateDivs(size) {
                 isDrawing = "true"
                 div.style.backgroundColor = "white"
             }
+
+            if (colorMode === "rainbow") {
+                isDrawing = "true"
+                div.style.backgroundColor = getRandomColor()
+            }
         })
 
         div.addEventListener('mousemove', () => {
@@ -64,6 +71,12 @@ function generateDivs(size) {
             if (colorMode === "erase") {
                 if (isDrawing == "true") {
                     div.style.backgroundColor = "white"
+                }
+            }
+
+            if (colorMode === "rainbow") {
+                if (isDrawing == "true") {
+                    div.style.backgroundColor = getRandomColor()
                 }
             }
         })
@@ -101,3 +114,16 @@ clearButton.addEventListener('click', () => {
         child.style.backgroundColor = "white"
     }
 })
+
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256)
+    const g = Math.floor(Math.random() * 256)
+    const b = Math.floor(Math.random() * 256)
+
+    const hexR = r.toString(16).padStart(2, '0')
+    const hexG = g.toString(16).padStart(2, '0')
+    const hexB = b.toString(16).padStart(2, '0')
+
+    let color = "#" + hexR + hexG + hexB
+    return color
+}
