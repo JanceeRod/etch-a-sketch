@@ -7,13 +7,9 @@ let canvasSize = sliderInput.value
 sliderInput.addEventListener('input',() => {
     canvasSize = sliderInput.value
     sizeDisplay.textContent = canvasSize + " x "  + canvasSize
-    generateDivs(canvasSize)
 })
 
 function generateDivs(size) {
-    while (canvas.firstChild) {
-        canvas.remove(canvas.firstChild)
-    }
     for (i = 0; i < (size * size); i++) {
         const div = document.createElement('div')
         div.className = "pixel"
