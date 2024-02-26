@@ -16,14 +16,18 @@ generateButton.addEventListener('click', () => {
 })
 
 function generateDivs(size) {
+    const cellSize = 460 / size
+
     for (i = 0; i < (size * size); i++) {
         const div = document.createElement('div')
         div.className = "pixel"
-        div.textContent = "1"
+
+        div.style.width = cellSize + "px"
+        div.style.height = cellSize + "px"
 
         div.style.border = "solid black"
-        div.style.display = "flex"
-        div.style.flexGrow = 
+        div.style.boxSizing = "border-box"
+        div.style.flexGrow = "1"
         canvas.appendChild(div)
     }
 }
