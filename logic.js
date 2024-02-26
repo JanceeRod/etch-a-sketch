@@ -34,6 +34,7 @@ function generateDivs(size) {
     for (i = 0; i < (size * size); i++) {
         const div = document.createElement('div')
         div.className = "pixel"
+        div.draggable = false
 
         div.style.width = cellSize + "px"
         div.style.height = cellSize + "px"
@@ -46,12 +47,23 @@ function generateDivs(size) {
                 isDrawing = "true"
                 div.style.backgroundColor = color
             }
+
+            if (colorMode === "erase") {
+                isDrawing = "true"
+                div.style.backgroundColor = "white"
+            }
         })
 
         div.addEventListener('mousemove', () => {
             if (colorMode === "pen") {
                 if (isDrawing == "true") {
                     div.style.backgroundColor = color
+                }
+            }
+
+            if (colorMode === "erase") {
+                if (isDrawing == "true") {
+                    div.style.backgroundColor = "white"
                 }
             }
         })
@@ -76,4 +88,16 @@ penButton.addEventListener('click', () => {
 
 rainbowButton.addEventListener('click', () => {
     colorMode = "rainbow"
+})
+
+eraserButton.addEventListener('click', () => {
+    colorMode = "erase"
+})
+
+clearButton.addEventListener('click', () => {
+    let canvasChildren = canvas.children
+    for (i = 0; i < canvasChildren.length; i++) {
+        let child = canvasChildren[i]
+        child.style.backgroundColor = "white"
+    }
 })
