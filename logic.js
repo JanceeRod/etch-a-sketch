@@ -11,8 +11,16 @@ sliderInput.addEventListener('input',() => {
 })
 
 function generateDivs(size) {
-    const div = document.createElement('div')
-    div.className = "pixel"
-    div.textContent = "1"
+    while (canvas.firstChild) {
+        canvas.remove(canvas.firstChild)
+    }
+    for (i = 0; i < (size * size); i++) {
+        const div = document.createElement('div')
+        div.className = "pixel"
+        div.textContent = "1"
 
+        div.style.border = "solid black"
+        div.style.display = "flex"
+        canvas.appendChild(div)
+    }
 }
