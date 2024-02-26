@@ -51,7 +51,7 @@ body {
     border: none;
 }
 
-.canvas {
+#canvas {
     border: solid rgb(73 ,73, 73);
     border-radius: 10px;
     height: 460px;
