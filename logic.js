@@ -63,19 +63,19 @@ function generateDivs(size) {
 
         div.addEventListener('mousemove', () => {
             if (colorMode === "pen") {
-                if (isDrawing == "true") {
+                if (isDrawing === "true") {
                     div.style.backgroundColor = color
                 }
             }
 
             if (colorMode === "erase") {
-                if (isDrawing == "true") {
+                if (isDrawing === "true") {
                     div.style.backgroundColor = "white"
                 }
             }
 
             if (colorMode === "rainbow") {
-                if (isDrawing == "true") {
+                if (isDrawing === "true") {
                     div.style.backgroundColor = getRandomColor()
                 }
             }
@@ -124,6 +124,5 @@ function getRandomColor() {
     const hexG = g.toString(16).padStart(2, '0')
     const hexB = b.toString(16).padStart(2, '0')
 
-    let color = "#" + hexR + hexG + hexB
-    return color
+    return "#" + hexR + hexG + hexB
 }

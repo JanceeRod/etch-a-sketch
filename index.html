@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
     <head>
         <meta charset="utf-8">
         <title> Etch-A-Sketch </title>
@@ -15,7 +15,7 @@
         <div class="main">
             <div class="drawing-tools">
                 <div class="controls">
-                    <input type="color" class="tools" id="color-picker">
+                    <label for="color-picker"></label><input type="color" class="tools" id="color-picker">
                     
                     <button class="tools" id="pen">
                         <span class="material-symbols-outlined" style="font-size: 50px; color: rgb(73, 73, 73);">
@@ -45,7 +45,7 @@
             <div id="slider">
                 <p id="size"> 16 x 16</p>
                 <div class="slidecontainer">
-                    <input type="range" min="16" max="64" value="16" class="slider" id="myRange">
+                    <label for="myRange"></label><input type="range" min="16" max="64" value="16" class="slider" id="myRange">
                 </div>
                 <button id="generate-canvas">
                     Generate
